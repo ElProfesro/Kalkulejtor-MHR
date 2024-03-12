@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulejtor MHR</title>
+    <script>
+        function oblicz() {
+            var waga = document.getElementById("waga").value;
+            var wiek = document.getElementById("wiek").value;
+            var mhr = 210 - (0.5 * wiek) - (0.022 * waga) + 4;
+            document.getElementById("wynik").innerHTML = mhr;
+        }
+
+        function oblicz2() {
+            var waga = document.getElementById("waga2").value;
+            var wiek = document.getElementById("wiek2").value;
+            var mhr = 210 - (0.5 * wiek) - (0.022 * waga);
+            document.getElementById("wynik2").innerHTML = mhr;
+        }
+
+    </script>
+    <style>
+        body {
+            text-align: center;
+            font-family: Georgia;
+            background-color: black;
+            color: white;
+        }
+
+        h1 {
+            color: white;
+            text-size-adjust: 48px;
+        }
+
+        h2 {
+            color: white;
+            text-size-adjust: 32px;
+        }
+
+        input {
+            background-color: gray;
+            color: white;
+            text-size-adjust: 22px;
+        }
+
+        label {
+            text-size-adjust: 28px;
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Oblicz swoję MHR</h1>
+    <h2>Dla mężczyzn</h2>
+    <label for="waga">Podaj swoją wagę!</label>
+    <input type="number" dir="rtl" id="waga" value=0>
+    <br>
+    <label for="wiek">Podaj swój wiek!</label>
+    <input type="number" dir="rtl" id="wiek" value=0>
+    <br>
+    <input type="button" dir="rtl" value="Oblicz MHR" onclick="oblicz()">
+    <br>
+    <div id="wynik">Tu jest wynik 😱</div>
+    <br>
+    <br>
+    <h2>Dla kobiet</h2>
+    <label for="waga2">Podaj swoją wagę!</label>
+    <input type="number" dir="rtl" id="waga2" value=0>
+    <br>
+    <label for="wiek2">Podaj swój wiek!</label>
+    <input type="number" dir="rtl" id="wiek2" value=0>
+    <br>
+    <input type="button" dir="rtl" value="Oblicz MHR" onclick="oblicz2()">
+    <br>
+    <div id="wynik2">Tu jest wynik 🤑</div>
+
+</body>
+
+</html>
